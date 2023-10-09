@@ -17,8 +17,6 @@ export class ProductCreateComponent implements OnInit {
 
   }
 
-
-
   constructor(
     private productService: ProductService,
     private router: Router
@@ -30,7 +28,7 @@ export class ProductCreateComponent implements OnInit {
 
   createProduct(): void {
     this.productService.create(this.product).subscribe(() => {
-      this.productService.showOnMessage('Produto criado')
+      this.productService.showMessage('Produto criado!')
       this.router.navigate(['/products'])
     })
   }
